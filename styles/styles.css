@@ -1,0 +1,365 @@
+:root {
+    --dark-coffee-color:#3D3733;
+    --medium-coffee-color: #CF8C4E;
+    --light-coffee-color: #EAEDEE;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navigation bar */
+
+nav { 
+    background-color: var(--dark-coffee-color);
+    font-family: 'Poppins', sans-serif;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--light-coffee-color);
+    
+}
+
+.coffee-logo {
+    color: var(--medium-coffee-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+    margin: 15px;
+}
+
+
+
+.nav-links ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    
+}
+
+.nav-links .nav-item {
+    list-style-type: none;
+}
+
+.nav-item a {
+    color: var(--light-coffee-color);
+    text-decoration: none;
+    padding: 2vw;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: var(--medium-coffee-color);
+    color: #ffffff
+}
+
+.coffee-logo:hover {
+    color: var(--light-coffee-color);
+}
+
+.toggle-button{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    top: 1rem;
+    right: 1rem;
+}
+
+.toggle-button .bar {
+    background-color: var(--light-coffee-color);
+    width: 100%;
+    height: 3px;
+}
+
+@media (max-width: 760px){
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .nav-links .nav-item {
+        text-align: center;
+    }
+
+    .nav-links.active{
+        display: flex;
+    }
+
+}
+
+/* ---------------------------------------Description----------------------------- */
+
+section {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.intro-content-container {
+    background-color: var(--light-coffee-color);
+    height: 100vh;
+    width:100%;
+    margin: 0;
+    padding: 0; 
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+}
+
+.description {
+    background-color: var(--light-coffee-color);
+    flex: 1; 
+    padding: 40px 20px ;
+    align-items: center;  
+    height: 100vh; 
+}
+
+.photo-container {
+    flex: 1;
+    background-color: #ffffff;
+    align-items: center;    
+    justify-content:center ;
+    display: flex;
+    height: 100vh;
+}
+
+.coffee-image {
+    max-width: 90%;
+    max-height: 90%;
+    box-shadow: 10px 10px var(--light-coffee-color);
+
+}
+
+.description h2 {
+    line-height: 1.5;
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: 2.5rem;
+    color: var(--dark-coffee-color);
+}
+
+/* -------------------------------------------download buttons ---------------------------------- */
+.download-btn {
+    margin-left: 2.5rem;
+}
+
+#apple-btn {
+    box-shadow: 0 6px  var(--dark-coffee-color);
+	background-color: var(--medium-coffee-color);
+    border-radius:13px;
+    border: 0px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:17px;
+    padding:9px 32px;
+    outline: none;
+    text-decoration:none;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+#android-btn {
+    box-shadow: 0 6px  var(--medium-coffee-color);
+	color: #ffffff;
+    border-radius:13px;
+    border: 0px;
+	display:inline-block;
+	cursor:pointer;
+	background-color: var(--dark-coffee-color);
+	font-size:17px;
+	padding:9px 28px;
+    text-decoration:none;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:focus {
+    outline:0;
+}
+
+#apple-btn:active, #android-btn:active {
+    transform: translateY(6px);
+    box-shadow:  none;
+}
+
+#apple-btn:hover, #android-btn:hover {
+    background-color: #ffffff;
+    color: var(--dark-coffee-color);
+}
+
+@media (max-width: 405px){
+    .download-btn {
+        margin: 10px;
+    }
+}
+
+
+
+ /* --------------------------------------options-----------------------------------*/
+
+#options {
+    background-color: var(--medium-coffee-color);
+    height: auto;
+    display: flex; 
+    flex-direction: column;
+    margin: 0;
+    padding:0
+
+}
+
+
+
+#options h1 {
+    display: block;
+    padding: 10px;
+    font-size: 3rem;
+    text-align: center;
+    color: var(--dark-coffee-color)
+    /* position: relative; */
+}
+
+
+
+
+.boxes {  
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap:wrap;
+    margin-bottom: 30px;
+  }
+
+  .single-box {
+      margin: 25px;
+      text-align: center;
+      transition: 0.5s;
+  }
+
+  .single-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px -10px rgba(0, 0, 0, 0.25);
+  }
+
+
+  .card-header {
+      color: var(--light-coffee-color);
+      background-color: var(--dark-coffee-color);
+      padding: 5px 2px;
+      font-size: 20px;
+  }
+
+  .card-body{
+    background-color: var(--light-coffee-color);
+    color: var(--dark-coffee-color);
+    padding: 15px;
+}
+
+.card-button{
+    color: var(--light-coffee-color);
+    background-color: var(--dark-coffee-color);
+    padding: 15px;
+}
+
+.card-button button{ 
+    color: var(--light-coffee-color);
+    background-color: var(--medium-coffee-color);
+    padding: 8px 35px;
+    border-radius:13px;
+    border: 0px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+/* ----------------------------------footer-------------------------------------------- */
+
+
+footer {
+    background-color: var(--dark-coffee-color);
+    padding: 10px;
+    text-align: center;
+    color: var(--light-coffee-color);
+};
+
+#footer p {
+    color: var(--light-coffee-color);
+}
+
+.container-links {
+    margin: 20px
+}
+
+.link{
+    margin: 10px;
+    text-align: center;
+    display: inline;
+}
+
+ .link a  {
+    color: var(--light-coffee-color);
+    text-decoration: none;
+} 
+
+.link a:hover {
+    color: var(--medium-coffee-color)
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+
+  @media (max-width: 960px) {
+    #download{
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    #apple-btn {
+        margin-left: 0;
+    }
+
+    .description h2 {
+        font-size: 38px;
+    }
+
+    .coffee-image {
+        margin: 15px;
+    }
+
+    #options h1 {
+        font-size: 30px;
+    }
+
+  }
